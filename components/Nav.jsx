@@ -19,7 +19,9 @@ const Nav = () => {
     setUpProviders();
     console.log(providers);
   }, []);
-
+  // {
+  //   alert(providers);
+  // }
   // alert(providers);
 
   return (
@@ -47,7 +49,7 @@ const Nav = () => {
             </button>
             <Link href={"/profile"}>
               <Image
-                src={"/assets/images/logo.svg"}
+                src={session?.user.image}
                 height={37}
                 width={37}
                 className="rounded-full"
@@ -77,7 +79,7 @@ const Nav = () => {
         {session?.user ? (
           <div className="flex">
             <Image
-              src={"/assets/images/logo.svg"}
+              src={session?.user.image}
               height={37}
               width={37}
               className="rounded-full"
@@ -105,7 +107,7 @@ const Nav = () => {
                   type="button"
                   onClick={() => {
                     setToggleDropdown(false);
-                    signout();
+                    signOut();
                   }}
                   className="mt-5 w-full black_btn"
                 >
