@@ -7,8 +7,9 @@ import { connectToDB } from "@utils/database";
 const handler = nextAuth({
   providers: [
     GoogleProvider({
-      clientId: process.env.GOOGLE_ID,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+      clientId: "1031518692759-o3eppj5lv45e2isooo3539ggb5ftc7j3.apps.googleusercontent.com",
+      clientSecret: "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"
+      // process.env.GOOGLE_CLIENT_SECRET,
     }),
   ],
   callbacks: {
